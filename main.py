@@ -15,10 +15,10 @@ CHAT_ID = os.getenv("CHAT_ID")
 
 # === CONFIG ===
 CHAINS = ["ethereum", "solana", "bsc"]
-MAX_MARKET_CAP = 10_000_000
+MAX_MARKET_CAP = 12_000_000
 MIN_LIQUIDITY = 20_000
 MAX_LIQUIDITY = 300_000
-MIN_VOLUME_15M = 3_000
+MIN_VOLUME_15M = 1_500
 
 sent_tokens = set()
 
@@ -51,7 +51,7 @@ def check_dexscreener():
             response = requests.get(url)
             if response.status_code != 200:
                 continue
-            pairs = response.json().get("pairs", [])[:20]
+            pairs = response.json().get("pairs", [])[:40]
 
             for pair in pairs:
                 token_id = pair['pairAddress']
