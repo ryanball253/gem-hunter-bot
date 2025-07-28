@@ -1,8 +1,3 @@
-import os
-
-BOT_TOKEN = os.getenv("7906341103:AAGfCA_CJgii0-uKw7bfMNpZW1Yq9SGDS-4")
-CHAT_ID = os.getenv("1121737368")
-
 from flask import Flask
 import requests
 import os
